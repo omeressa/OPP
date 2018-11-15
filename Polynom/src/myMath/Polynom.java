@@ -375,7 +375,7 @@ public class Polynom implements Polynom_able{
 		return ans;
 	}
 	/**
-	 * gives back the string massege
+	 * Gives back the string massege
 	 */
 	public String toString() {
 		String ans = "";
