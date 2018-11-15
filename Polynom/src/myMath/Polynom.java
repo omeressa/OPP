@@ -32,11 +32,11 @@ public class Polynom implements Polynom_able{
 	// ********** add your code below ***********
 
 	/**
-	 * List of monoms
+	 * List of Monoms
 	 */
 	 ArrayList<Monom> polynom;
 	/**
-	 * this is an empty Constructor 
+	 * this is an empty Constructor,gives us zero constructor is we refere to in isZero Function 
 	 */
 	public Polynom() {
 		polynom = new ArrayList<Monom>();
