@@ -1,0 +1,12 @@
+we created both classes 
+Monom ans Polynom with the help of internet library 
+we read some info from
+ https://codereview.stackexchange.com/questions/90188/a-simpler-multiply-and-addition-polynomial-function
+ https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/code/Polynomial.java
+ and also we used some of the dta and codes from gethub website
+ creating both monom and polynom was similier and easy to some point the tricky part was to creat a monom or polynom that can receve a string and translate it to numbers
+ plus multplying the numbers was also tricky
+ at the end we made a test class to test all of our functions and when we run the test class, all worked fine and perfect
+ there is some mistakes here and there but in general this ex is well done
+ :-)
+ have fun reading and checking our Ex...
