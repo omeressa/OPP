@@ -35,6 +35,7 @@ public class Polynom implements Polynom_able{
 	 * List of Monoms
 	 */
 	 ArrayList<Monom> polynom;
+	ArrayList<Monom> pol;
 	/**
 	 * this is an empty Constructor,gives us zero constructor is we refere to in isZero Function 
 	 */
