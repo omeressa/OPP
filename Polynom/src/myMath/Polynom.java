@@ -350,24 +350,7 @@ public class Polynom implements Polynom_able{
 		this.polynom.sort(ans);
 	
 	}
-	/**
-	 * translate string monom to numbers monom
-	 * @param s string monom
-	 * @return monom in numbers
-	 */
-	private static Polynom init_from_string(String s) {
-		if(s==null) {throw new RuntimeException("Wrong parameter for the Monom Constractor - should not be NULL!!!");}
-		String[] params = s.split(" ");
-		Polynom ans = new Polynom();
-		for(int i=0;i<params.length;i++) {
-			String t = params[i];
-			if(!t.contains("+") || t.length()>1) {
-				Monom c = new Monom(t);
-				ans.add(c);
-			}
-		}
-		return ans;
-	}
+
 	/**
 	 * Gives back the string massege
 	 */
