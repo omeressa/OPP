@@ -35,7 +35,6 @@ public class Polynom implements Polynom_able{
 	 * List of Monoms
 	 */
 	 ArrayList<Monom> polynom;
-	ArrayList<Monom> pol;
 	/**
 	 * this is an empty Constructor,gives us zero constructor is we refere to in isZero Function 
 	 */
@@ -401,47 +400,4 @@ public class Polynom implements Polynom_able{
 
 
 
-	@Override
-	public void PrintMinMax(String s, double x0, double x1) {
-
-		double start = x0;
-		double end = x1;
-
-
-		Polynom der = (Polynom) this.derivative();
-		double eps = 0.0001;
-		for (;start < end ; start=start+eps) {
-			if(der.f(start) < 0 && der.f(start+eps) > 0) {
-				polynom.add(new Monom(start,this.f(start)));
-			}
-			if(der.f(start) > 0 && der.f(start+eps) < 0) {
-				polynom.add(new Monom(start,this.f(start)));
-			}
-
-		}
-		Draw_MinMax(s,polynom,x0,x1);
-
-	}
-
-	private static void Draw_MinMax(String s, List<Point> polynom, double x0, double x1) {
-
-		JFrame f = new JFrame();		
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		OptionAxe optionsAxes = new OptionAxe(Color.BLACK, true, -1, 1, true, true);
-		Graphique.getInstance().initGraphique(new AxeX(x0, 10, optionsAxes), new AxeY(-10, x1, optionsAxes));
-		char a = 'A';
-		for (int i = 0 ; i < polynom.size(); i++, a++) {
-			Graphique.getInstance().ajouterElement(new Point(a, polynom.get(i).getAbscisse(),polynom.get(i).getOrdonnee()));
-		}
-		Graphique.getInstance().ajouterElement(new Fonction((s)));
-        ArrayList<Monom> Monoms = new ArrayList<Monom>();
-		Graphique.getInstance().ajouterElement(new Polygone(Monom));
-		Graphique.getInstance().ajouterElement(new Quadrillage(0.5, 0.5));
-		f.add(new ZoneGraphique());
-		f.pack();
-		f.setLocationRelativeTo(null);
-		f.setVisible(true);
-
-	}
-*/	
 }
