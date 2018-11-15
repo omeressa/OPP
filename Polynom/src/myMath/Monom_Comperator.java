@@ -16,5 +16,5 @@ public class Monom_Comperator implements Comparator<Monom> {
 		else if( arg0.compareTo(arg1) == 0)
 			return 0;
 		return -1;
-	}
+	 }
 }
