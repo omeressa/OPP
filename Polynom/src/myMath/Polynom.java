@@ -332,13 +332,7 @@ public class Polynom implements Polynom_able{
 	 * @param s string monom
 	 */
 	public Polynom(String s) {
-/*
-		polynom = new ArrayList<Monom>() ;
-		Polynom th =init_from_string(s);
-		Iterator<Monom> iter = th.iteretor();
-		while(iter.hasNext()) {
-			this.add(iter.next());
-		}*/
+
 		polynom = new ArrayList<Monom>();
 		s=s.toLowerCase();
 		s=s.replaceAll(" ", "");
