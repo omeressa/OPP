@@ -5,71 +5,6 @@ import java.util.Iterator;
 
 public class Test {
 
-
-	/*
-	public static void test2() {
-		Polynom_able _p0 = new Polynom();
-		Monom _m_1 = new Monom(-1,0);
-		Polynom_able _p_1 = new Polynom(); 
-		_p_1.add(new Monom(_m_1)); // -1
-		
-		Polynom_able p1 = new Polynom("2x+-3x^2+x^3");
-		Polynom_able p2 = new Polynom("-0.2+2.1x+-x^3");
-		
-		//add
-		p1.add(p2);
-		System.out.println("get \"-0.2+4.1x-3x^2\":");
-		System.out.println(p1);
-		
-		//substract
-		p1.substract(p2);
-		System.out.println("get \"2x-3x^2+x^3\":");
-		System.out.println(p1);
-		
-		//multiply
-		Polynom_able mul = p1.copy();
-		mul.multiply(p2);
-		System.out.println("get \"-0.4x+4.8x^2-6.5x^3+0.1x^4+3x^5-x^6\":");
-		System.out.println(mul);
-		
-		//derivative
-		System.out.println("get \"2-6x+3x^2\":");
-		System.out.println(p1.derivative());
-		
-		System.out.println("get \"2.1-3x^2\":");
-		System.out.println(p2.derivative());
-		
-		//f(x)
-		System.out.println("get 6:" + p1.f(3));
-		System.out.println("get -20.9:" + p2.f(3));
-		
-		
-		
-		//root and area
-		double eps = Double.MIN_VALUE;
-		System.out.println("\nroot\n");
-		
-		//root p1
-		System.out.println("get something close to 0:" + p1.root(-0.5, 0.5, eps));
-		System.out.println("get something close to 1:" + p1.root(0.5, 1.5, eps));
-		System.out.println("get something close to 2:" + p1.root(1.5, 2.5, eps));
-		
-		//root p2
-		System.out.println("get something close to -1.49:" + p2.root(-2, -1, eps));
-		System.out.println("get something close to 0.09:" + p2.root(0, 1, eps));
-		System.out.println("get something close to 1.39:" + p2.root(1, 2, eps));
-		
-		eps = 0.00001;
-		System.out.println("\narea\n");
-		//area
-		System.out.println("get something close to -0.25:" + p1.area(0, 1, eps));
-		System.out.println("get something close to 0:" + p1.area(0.5, 1.5, eps));
-		System.out.println("get something close to -0.140625:" + p1.area(0.5, 2, eps));
-		
-		System.out.println("get something close to 0.6:" + p2.area(0, 1, eps));
-		
-		
-	}*/
 	
 	public static void test1() {
 		//zero test
@@ -227,11 +162,7 @@ public class Test {
 	public static void main(String[] args) {
 		System.out.println("Test1");
 		test1();
-		//System.out.println("\nTest2\n");
-		//test2();
-		//test_add();
-		//test_multiply();
-		//test_equals();
+
 		
 	
 		
