@@ -398,29 +398,7 @@ public class Polynom implements Polynom_able{
 	 * **************************************************************************
 	 */
 
-/*
-	@Override
-	public double underX_area(double x0, double x1, double eps) {	
-		double sum = 0;
 
-		if (x0 == x1) {
-			return sum;
-		}
-		if (x1 < x0) {
-			double temp = x1;
-			x1 = x0;
-			x0=temp;
-		}
-
-		for (; x0 < x1; x0 = x0+eps) {
-			if (f(x0) <= 0) {
-				double area_By_Parts = ((f(x0)+f(x0+eps))/2)*eps;
-				sum = sum + area_By_Parts;
-			}
-		}
-		return Math.abs(sum);
-	}
-/*
 
 	@Override
 	public void PrintMinMax(String s, double x0, double x1) {
