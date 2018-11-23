@@ -254,32 +254,30 @@ public class Polynom implements Polynom_able{
      */
 	@Override
 	public double root(double x0, double x1, double eps) {
-		// TODO Auto-generated method stub
-		double y0 = this.f(x0);
-		double y1 = this.f(x1);
-		
-		if(y0*y1>0) {
-			throw new RuntimeException("Error: f(x0) and f(x1) should be on oposite sides of the X asix");
+
+
+		double c = x0;
+
+		if((f(x0)*f(x1)) >= 0) {
+			System.out.println("wrong solotion for this polynom.");
+			return Double.MAX_VALUE;
 		}
-		
-		double delta_x = Math.abs(x0-x1);
-		double delta_y = Math.abs(y0-y1);
-		if(true) {
-			System.out.println("f("+x0+") = "+y0+"    f("+x1+") = "+y1+"   dx = "+delta_x);
-		}
-		if (delta_x>eps || delta_y>eps) {
-			double x_mid = (x0+x1)/2;
-			double y_mid = this.f(x_mid);
-			double dir = y0*y_mid;
-			if(dir<0) {
-				return root(x0,x_mid, eps);
+		else {
+			while ((x1 - x0) >= eps) {			
+				c = (x0+x1)/2;
+				if (f(c) == 0.0) {
+					break;
+				}
+				else if (f(c)*f(x0) < 0) {
+					x1 = c;
+				}
+				else {
+					x0 = c;
+				}
+
 			}
-			else {
-				return root(x_mid, x1, eps);
-			}
 		}
-		return x0;
-	
+		return c;
 	}
     /**
      * sets a copy of polynom_able and return it
@@ -312,12 +310,13 @@ public class Polynom implements Polynom_able{
      */
 	@Override
 	public double area(double x0, double x1, double eps) {
-		// TODO Auto-generated method stub
-		double ans = 0;
-		for(double x = x0; x < x1; x+=eps)
-			for(Monom m:polynom)
-				ans += m.area(x0, x1, eps);
-		return ans;
+		x0=x0+eps;
+		double sum=0;
+		while(x0<=x1) {
+			sum+=Math.abs(f(x0))*eps;
+			x0+=eps;
+		}
+		return sum;
 	}
     /**
      * iterator
