@@ -161,7 +161,7 @@ public class Monom implements function{
 	 * @param s string monom
 	 * @return monom
 	 */
-	private static Monom init_from_string(String s) {
+	private static Monom init_string (String s ) {
 		if(s==null) {throw new RuntimeException("Wrong parameter for the Monom Constractor - should not be NULL!!!");}
 		double  coef = 1;
 		int pow = 0;
@@ -169,10 +169,7 @@ public class Monom implements function{
 		if(s.contains("x")) {
 			int ind = s.indexOf("x");
 			String co = s.substring(0, ind);
-			if(co.length()>0) {
-				double c = Double.parseDouble(co);
-				// Double.parseDouble("#$%");
-			}
+
 			try{
 				double c = Double.parseDouble(co);
 				coef = c;
@@ -180,18 +177,21 @@ public class Monom implements function{
 			catch(Exception e) {coef = 1;}
 			if(s.length()>ind+2) {
 				String po = s.substring(ind+2);
+				try{
 					int p = Integer.parseInt(po);
-					//  Integer.parseInt("1.1");
-					//  Integer.parseInt("dr4$");
 					pow = p;
+				}
+				catch(Exception e) {pow = 0;}
 			}
 		}
 		else {  // just number ==> power = 0;
 			coef = Double.parseDouble(s);
 		}
-		
+
 		ans = new Monom(coef, pow);	
 		return ans;
+
+
 	}
 	/**
 	 * gives back the string massege
